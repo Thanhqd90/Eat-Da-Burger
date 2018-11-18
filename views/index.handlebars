@@ -1,0 +1,39 @@
+<div class="d-flex justify-content-center container">
+        <form action="/api/newburger" method="POST">
+            <textarea name="burgerName" class="mt-2 form-control"></textarea>
+            <div class="button-col">
+                <button type="submit" class="btn btn-primary btn-lg">Add new burger to Menu</button>
+            </div>
+        </form>
+</div>
+
+<br><br>
+
+<div class="container">
+    <div class="row">
+    <div class="col-md-6">
+        <ul class="burger-list">
+            <h1 class="text-center">Available to Devour</h1>
+            {{#each burgers}} 
+                {{#unless devoured}}
+                    {{> burgers/burger-button devoured=false}}
+                {{/unless}}
+            {{/each}}
+        </ul>
+    </div>
+    <div class="col-md-6">
+        <ul class="burger-list">
+            <h1 class="text-center">Previously Devoured</h1>
+            {{#each burgers}} 
+                {{#if devoured}}
+                    {{> burgers/burger-button devoured=true}}
+                {{/if}}
+            {{/each}}
+        </ul>
+    </div>
+</div>
+</div>
+
+
+
+<script src="js/burgers.js"></script>

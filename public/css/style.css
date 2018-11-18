@@ -1,0 +1,28 @@
+body {
+    background-color:rgb(252, 87, 76);
+    color: white;
+}
+
+ul.burger-list {
+    list-style: none;
+}
+
+ul.burger-list>li, .burger-box {
+    padding: 10px 15px;
+    background-color: black;
+    text-align: center;
+    margin: 10px;
+    font-size: 2rem;
+}
+
+.button-col{ 
+    margin: 0 auto;
+    text-align: center; 
+    margin-top: 10px;
+}
+
+form {
+    align-content: center;
+    margin-top: 25px;
+    width: 50%;
+}
